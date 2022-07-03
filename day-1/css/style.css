@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&display=swap');
+
+html {
+  font-size: 62.25%;
+}
+
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  margin-top: -150px;
+  margin-left: -150px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #43399f;
+  background-image: linear-gradient(to top right, #43399f 0%, #5cc9ce 100%);
+  color: #fff;
+  font-weight: 700;
+  font-family: "Courier Prime", monospace;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@media screen and (min-width: 410px) {
+  .frame {
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+  }
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.number {
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.num {
+  position: absolute;
+}
+
+.num:nth-of-type(2) {
+  z-index: 4;
+  left: 0;
+}
+
+.num:nth-of-type(3) {
+  height: 50px;
+  width: 50px;
+  z-index: 3;
+  left: 10%;
+}
+
+.num:nth-of-type(4) {
+  height: 50px;
+  width: 50px;
+  z-index: 2;
+  right: 0;
+}
+
+.num--one {
+  height: 100%;
+}
+
+.num--one::before {
+  content: "";
+  width: 24px;
+  height: 100%;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.num--one::after {
+  content: "";
+  width: 50px;
+  height: 24px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 10px;
+  left: -30px;
+  transform: rotate(-35deg);
+  z-index: -1;
+}
+
+.num--zero {
+  width: 5rem;
+  height: 5rem;
+  border: 24px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.2);
+}
+
+.text {
+  text-transform: uppercase;
+  font-size: 8.2rem;
+  margin: 30px 0 0 0;
+  line-height: 20px;
+}
+
+.text--small {
+  font-size: 2.3rem;
+  margin: 20px 0 0 0;
+}
